@@ -1,0 +1,12 @@
+<% if flash[:notice] %>
+  <div class="container flex justify-center">
+    <p class="px-4 py-2 m-4 text-green-800 bg-green-100 border rounded-xl animate-bounce"><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
+<div class="container flex justify-center">
+  <h1 class="flex items-center text-4xl font-bold text-slate-900">
+    <%= gravatar_for @user %>
+    <%= @user.name %>
+  </h1>
+</div>

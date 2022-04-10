@@ -1,4 +1,11 @@
-<div>
-  <h1 class="font-bold text-4xl">Users#new</h1>
-  <p>Find me in app/views/users/new.html.erb</p>
+<div class='container flex flex-col items-center justify-center columns-1'>
+  <h1 class="flex flex-col pb-6 text-4xl font-bold">Sign up</h1>
+  <%= render 'shared/error_messages'%>
+    <%= form_with model: @user, class: 'flex flex-col' do |f|%>
+      <%= f.text_field :name, placeholder: :name, class: 'm-3 py-1 rounded' %>
+      <%= f.text_field :email, placeholder: :email, class: 'm-3 py-1 rounded'  %>
+      <%= f.text_field :password, placeholder: :password, class: 'm-3 py-1 rounded'  %>
+      <%= f.text_field :password_confirmation, placeholder: 'Confirm Password', class: 'm-3 py-1 rounded'  %>
+      <%= f.submit class: 'my-4 py-2 rounded border bg-gray-100 hover:bg-gray-300 text-slate-800' %>
+    <% end %>
 </div>

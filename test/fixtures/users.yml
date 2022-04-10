@@ -1,0 +1,5 @@
+user1:
+  id:              1
+  name:            ponponboy
+  email:           poccori@gmail.com
+  password_digest: < %= BCrypt::Password.create('foobar') %>
